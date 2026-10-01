@@ -1,0 +1,109 @@
+CREATE OR REPLACE TABLE `${PROJECT_ID}.${DATASET_REPORTS}.resumo_semanal_pbi` AS
+WITH produto_b AS(
+    SELECT
+    semana,
+    nome_semana,
+    nome_grupo_anuncio,
+    visao,
+    plataforma,
+    'Produto B' AS produto,
+    SUM(custo) AS custo,
+    SUM(impressoes) AS impressoes,
+    SUM(cliques) AS clique,
+    IFNULL(SAFE_DIVIDE(SUM(parcela_impr * impressoes), SUM(impressoes)),0) AS parcela_impressao,
+    SUM(conversoes) AS conversoes,
+    IFNULL(SAFE_DIVIDE(SUM(cliques), SUM(impressoes)),0) AS CTR,
+    IFNULL(SAFE_DIVIDE(SUM(custo), SUM(conversoes)),0) AS CPA,
+    IFNULL(SAFE_DIVIDE(SUM(conversoes), SUM(cliques)),0) AS taxa_conversao
+    FROM ${PROJECT_ID}.${DATASET_REPORTS}.resumo_semanal_produto_b
+    WHERE custo>0
+    GROUP BY 1,2,3,4,5
+    
+),
+produto_a AS(
+    SELECT
+    semana,
+    nome_semana,
+    nome_grupo_anuncio,
+    visao,
+    plataforma,
+    'Produto A' AS produto,
+    SUM(custo) AS custo,
+    SUM(impressoes) AS impressoes,
+    SUM(cliques) AS clique,
+    IFNULL(SAFE_DIVIDE(SUM(parcela_impr * impressoes), SUM(impressoes)),0) AS parcela_impressao,
+    SUM(conversoes) AS conversoes,
+    IFNULL(SAFE_DIVIDE(SUM(cliques), SUM(impressoes)),0) AS CTR,
+    IFNULL(SAFE_DIVIDE(SUM(custo), SUM(conversoes)),0) AS CPA,
+    IFNULL(SAFE_DIVIDE(SUM(conversoes), SUM(cliques)),0) AS taxa_conversao
+    FROM ${PROJECT_ID}.${DATASET_REPORTS}.resumo_semanal_produto_a
+    WHERE custo>0
+    GROUP BY 1,2,3,4,5
+    
+),
+produto_c AS(
+    SELECT
+    semana,
+    nome_semana,
+    nome_grupo_anuncio,
+    visao,
+    plataforma,
+    'Produto C' AS produto,
+    SUM(custo) AS custo,
+    SUM(impressoes) AS impressoes,
+    SUM(cliques) AS clique,
+    IFNULL(SAFE_DIVIDE(SUM(parcela_impr * impressoes), SUM(impressoes)),0) AS parcela_impressao,
+    SUM(conversoes) AS conversoes,
+    IFNULL(SAFE_DIVIDE(SUM(cliques), SUM(impressoes)),0) AS CTR,
+    IFNULL(SAFE_DIVIDE(SUM(custo), SUM(conversoes)),0) AS CPA,
+    IFNULL(SAFE_DIVIDE(SUM(conversoes), SUM(cliques)),0) AS taxa_conversao
+    FROM ${PROJECT_ID}.${DATASET_REPORTS}.resumo_semanal_produto_c
+    WHERE custo>0
+    GROUP BY 1,2,3,4,5
+    
+),
+produto_d AS(
+    SELECT
+    semana,
+    nome_semana,
+    nome_grupo_anuncio,
+    visao,
+    plataforma,
+    'Produto D' AS produto,
+    SUM(custo) AS custo,
+    SUM(impressoes) AS impressoes,
+    SUM(cliques) AS clique,
+    IFNULL(SAFE_DIVIDE(SUM(parcela_impr * impressoes), SUM(impressoes)),0) AS parcela_impressao,
+    SUM(conversoes) AS conversoes,
+    IFNULL(SAFE_DIVIDE(SUM(cliques), SUM(impressoes)),0) AS CTR,
+    IFNULL(SAFE_DIVIDE(SUM(custo), SUM(conversoes)),0) AS CPA,
+    IFNULL(SAFE_DIVIDE(SUM(conversoes), SUM(cliques)),0) AS taxa_conversao
+    FROM ${PROJECT_ID}.${DATASET_REPORTS}.resumo_semanal_produto_d
+    WHERE custo>0
+    GROUP BY 1,2,3,4,5
+),
+produto_e AS(
+    SELECT
+    semana,
+    nome_semana,
+    nome_grupo_anuncio,
+    visao,
+    plataforma,
+    'Produto E' AS produto,
+    SUM(custo) AS custo,
+    SUM(impressoes) AS impressoes,
+    SUM(cliques) AS clique,
+    IFNULL(SAFE_DIVIDE(SUM(parcela_impr * impressoes), SUM(impressoes)),0) AS parcela_impressao,
+    SUM(conversoes) AS conversoes,
+    IFNULL(SAFE_DIVIDE(SUM(cliques), SUM(impressoes)),0) AS CTR,
+    IFNULL(SAFE_DIVIDE(SUM(custo), SUM(conversoes)),0) AS CPA,
+    IFNULL(SAFE_DIVIDE(SUM(conversoes), SUM(cliques)),0) AS taxa_conversao
+    FROM ${PROJECT_ID}.${DATASET_REPORTS}.resumo_semanal_produto_e
+    WHERE custo>0
+    GROUP BY 1,2,3,4,5
+)
+SELECT * FROM produto_b UNION ALL
+SELECT * FROM produto_a UNION ALL
+SELECT * FROM produto_c UNION ALL 
+SELECT * FROM produto_d UNION ALL
+SELECT * FROM produto_e;

@@ -1,0 +1,5 @@
+load DATA OVERWRITE `${PROJECT_ID}.${DATASET_REPORTS}.resumo_semanal_produto_c`
+FROM FILES (
+  format = 'PARQUET',
+  uris = ['gs://${DATA_BUCKET}/output/semanal_produto_c.parquet']
+);

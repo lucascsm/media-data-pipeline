@@ -1,0 +1,5 @@
+produto;veiculo;visao;valor;valor_amigavel;prioridade;tipo_linha;evento_principal;modalidade
+Produto A;google;demo-search;demo;Campanha demo;1;palavra;false;demo
+Produto A;google;demo-search;demo_conversion;Conversão demo;1;evento;true;demo
+Produto A;meta;demo-social;demo;Campanha demo;1;palavra;false;demo
+Produto A;meta;demo-social;demo_conversion;Conversão demo;1;evento;true;demo

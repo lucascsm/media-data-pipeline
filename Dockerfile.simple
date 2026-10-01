@@ -1,0 +1,8 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY src ./src
+RUN mkdir -p /app/config /mnt/gcs/media/output/backup
+ENV PYTHONUNBUFFERED=1 PYTHONPATH=/app/src:/app CONFIG_DIR=/app/config GCS_MOUNT=/mnt/gcs/media
+ENTRYPOINT ["python", "-u", "-m", "src.main"]

@@ -1,0 +1,12 @@
+# Optional OAuth refresh fields: fill all three to enable refresh.
+client_id: ""
+secret_key: ""
+refresh_token: ""
+# Optional reporting overrides. Empty values keep the collector defaults.
+corp_id: ""
+report_account_id: ""
+access_token: "REPLACE_WITH_KWAI_ACCESS_TOKEN"
+accounts: []
+page_size: 100
+granularity: "DAY"
+time_zone_iana: "America/Sao_Paulo"

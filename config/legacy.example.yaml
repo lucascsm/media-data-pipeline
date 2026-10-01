@@ -1,0 +1,52 @@
+# Fictional rules and values for archived workflows only.
+ga4_property_id: REPLACE_WITH_GA4_PROPERTY_ID
+default_asset_url: https://example.com/placeholder.png
+url_to_product:
+  https://example.com/product-a: Produto A
+  https://example.com/product-b: Produto B
+budget_data:
+  '2025-01-01':
+    PRODUTO A:
+      GOOGLE: 1000.0
+      META: 1000.0
+      TIKTOK: 1000.0
+cpa_params:
+  PRODUTO A: 10.0
+rules:
+  LABEL_OR_MATCH_01: produto b
+  LABEL_OR_MATCH_02: produto_b
+  LABEL_OR_MATCH_03: product_b_tela_simulacao_au
+  LABEL_OR_MATCH_04: product_b_tela_simulacao_im
+  LABEL_OR_MATCH_05: Produto B
+  LABEL_OR_MATCH_06: produto a
+  LABEL_OR_MATCH_07: demo_registration
+  LABEL_OR_MATCH_08: produto c
+  LABEL_OR_MATCH_09: produto_c
+  LABEL_OR_MATCH_10: demo_purchase_completed
+  LABEL_OR_MATCH_11: category_c
+  LABEL_OR_MATCH_12: Produto A
+  LABEL_OR_MATCH_13: Produto C
+  CUSTOM_EVENT_14: app_custom_event.demo_event_14
+  CUSTOM_EVENT_15: app_custom_event.demo_event_15
+  CUSTOM_EVENT_16: app_custom_event.demo_event_16
+  CUSTOM_EVENT_17: app_custom_event.demo_event_17
+  CUSTOM_EVENT_18: app_custom_event.demo_event_18
+  CUSTOM_EVENT_19: app_custom_event.demo_event_19
+  CUSTOM_EVENT_20: app_custom_event.demo_event_20
+  CUSTOM_EVENT_21: app_custom_event.demo_event_21
+  CUSTOM_EVENT_22: app_custom_event.demo_event_22
+  LABEL_OR_MATCH_23: Produto E
+  LABEL_OR_MATCH_24: Produto D
+  LABEL_OR_MATCH_25: demo_category_c_completed
+  CAMPAIGN_EVENT_26: demo_campaign_event_26
+  S2S_EVENT_27: evento_demo_27
+  S2S_EVENT_28: evento_demo_28
+  S2S_EVENT_29: evento_demo_29
+  S2S_EVENT_30: evento_demo_30
+  S2S_EVENT_31: evento_demo_31
+  LABEL_OR_MATCH_32: dashboard_produto_a.csv
+  LABEL_OR_MATCH_33: 'para os produtos Produto C, Produto B e Produto A. Traga o resumo
+    do que se destacou '
+  LABEL_OR_MATCH_34: (Produto C|Produto B|Produto A)[:\-]\s*(.+)$
+  LABEL_OR_MATCH_35: Calculando diferenças semanais por produto e veículo...
+  LABEL_OR_MATCH_36: Carregando logs recentes por produto e veículo...

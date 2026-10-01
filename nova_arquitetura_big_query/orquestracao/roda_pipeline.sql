@@ -1,0 +1,1 @@
+CALL `${PROJECT_ID}.${DATASET_SPEC}.sp_run_pipeline_midia`();

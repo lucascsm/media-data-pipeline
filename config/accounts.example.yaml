@@ -1,0 +1,13 @@
+# Copy to accounts.yaml and provide your own accounts before collecting.
+accounts: []
+# Example entry (uncomment and replace the ID in the local accounts.yaml):
+# - platform: google
+#   account_id: "REPLACE_WITH_ACCOUNT_ID"
+#   product: "Produto A"
+#   aggregate_conversions: false
+# - platform: meta
+#   account_id: "act_REPLACE_WITH_ACCOUNT_ID"
+#   product: "Produto A"
+product_aliases:
+  produto a: "Produto A"
+  produto b: "Produto B"

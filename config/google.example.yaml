@@ -1,0 +1,8 @@
+developer_token: "REPLACE_WITH_GOOGLE_DEVELOPER_TOKEN"
+use_proto_plus: true
+client_id: "REPLACE_WITH_GOOGLE_OAUTH_CLIENT_ID"
+client_secret: "REPLACE_WITH_GOOGLE_OAUTH_CLIENT_SECRET"
+refresh_token: "REPLACE_WITH_GOOGLE_REFRESH_TOKEN"
+# Optional: uncomment when authenticating through a manager account.
+# login_customer_id: "REPLACE_WITH_GOOGLE_MANAGER_ACCOUNT_ID"
+# GA4 settings for the archived workflow belong in legacy.yaml.
